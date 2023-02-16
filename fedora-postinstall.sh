@@ -1,3 +1,5 @@
+# Go to home directory
+cd ~
 # Ask for sudo credentials
 sudo -v
 # Download & install JetBrainsMono Nerd Font
