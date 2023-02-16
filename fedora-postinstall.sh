@@ -6,8 +6,6 @@ sudo bash -c "echo 'defaultyes=True' >> /etc/dnf/dnf.conf"
 sudo bash -c "echo 'keepcache=True' >> /etc/dnf/dnf.conf"
 # Enable RPM Fusion
 sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-# Enable Flathub
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # Update system
 sudo dnf -y update 
 # Add VSCodium repo GPG key
@@ -20,6 +18,10 @@ sudo dnf -y install bat cmatrix cmus codium exa feh gcc-c++ git kitty mpv libreo
 wget https://updates.getmailspring.com/download?platform=linuxRpm -O ~/Downloads/mailspring.rpm
 # Install mailspring rpm
 sudo dnf -y install ~/Downloads/mailspring.rpm
+# Enable Flathub
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+# Install flatpak packages
+flatpak install -y flathub com.discordapp.Discord com.heroicgameslauncher.hgl com.spotify.Client com.valvesoftware.Steam io.gitlab.librewolf-community md.obsidian.Obsidian net.ankiweb.Anki net.davidotek.pupgui2 org.libretro.RetroArch org.ppsspp.PPSSPP org.prismlauncher.PrismLauncher org.telegram.desktop us.zoom.Zoom
 
 # ~/.local/bin/
 pip install --user bumblebee-status
