@@ -10,10 +10,10 @@ sudo bash -c "echo 'fastestmirror=True' >> /etc/dnf/dnf.conf"
 sudo bash -c "echo 'max_parallel_downloads=10' >> /etc/dnf/dnf.conf"
 sudo bash -c "echo 'defaultyes=True' >> /etc/dnf/dnf.conf"
 sudo bash -c "echo 'keepcache=True' >> /etc/dnf/dnf.conf"
-# Enable RPM Fusion
-sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 # Update system
 sudo dnf -y update 
+# Enable RPM Fusion
+sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Add VSCodium repo GPG key
 sudo rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
