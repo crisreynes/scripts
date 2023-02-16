@@ -10,6 +10,7 @@ sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-rel
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # Update system
 sudo dnf -y update 
+# Install packages
 sudo dnf -y install bat cmatrix cmus exa feh gcc-c++ git kitty mpv libreoffice neofetch neovim obs-studio python3-pip qbittorrent redshift rofi steam-devices stow syncthing tldr unrar vifm vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
 
 # ~/.local/bin/
