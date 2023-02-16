@@ -1,3 +1,9 @@
+# Download & install JetBrainsMono Nerd Font
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip -O ~/Downloads/jetbrainsmono.zip
+mkdir ~/.local/share/fonts/jetbrainsmono-nerd-font
+unzip ~/Downloads/jetbrainsmono.zip -d ~/.local/share/fonts/jetbrainsmono-nerd-font
+fc-cache -fv
+
 # Add settings to /etc/dnf/dnf.conf
 sudo bash -c "echo '# Added settings' >> /etc/dnf/dnf.conf"
 sudo bash -c "echo 'fastestmirror=True' >> /etc/dnf/dnf.conf"
@@ -8,16 +14,19 @@ sudo bash -c "echo 'keepcache=True' >> /etc/dnf/dnf.conf"
 sudo dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 # Update system
 sudo dnf -y update 
+
 # Add VSCodium repo GPG key
 sudo rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg
 # Add VSCodium repo
 printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbaseurl=https://download.vscodium.com/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg\nmetadata_expire=1h" | sudo tee -a /etc/yum.repos.d/vscodium.repo
+
 # Install packages
 sudo dnf -y install bat cmatrix cmus codium exa feh gcc-c++ git kitty mpv libreoffice neofetch neovim obs-studio python3-pip qbittorrent redshift rofi steam-devices stow syncthing tldr unrar vifm vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
 # Download mailspring rpm
 wget https://updates.getmailspring.com/download?platform=linuxRpm -O ~/Downloads/mailspring.rpm
 # Install mailspring rpm
 sudo dnf -y install ~/Downloads/mailspring.rpm
+
 # Enable Flathub
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # Install flatpak packages
