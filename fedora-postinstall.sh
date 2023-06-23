@@ -6,7 +6,7 @@ cd /home/"$SUDO_USER"
 # sudo -v
 # Download & install JetBrainsMono Nerd Font
 sudo -u $SUDO_USER wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip -O /home/"$SUDO_USER"/Downloads/jetbrainsmono.zip
-sudo -u $SUDO_USER mkdir -p /home/"$SUDO_USER"/local/share/fonts/jetbrainsmono-nerd-font
+sudo -u $SUDO_USER mkdir -p /home/"$SUDO_USER"/.local/share/fonts/jetbrainsmono-nerd-font
 sudo -u $SUDO_USER unzip /home/"$SUDO_USER"/Downloads/jetbrainsmono.zip -d /home/"$SUDO_USER"/local/share/fonts/jetbrainsmono-nerd-font
 sudo -u $SUDO_USER fc-cache -fv
 
