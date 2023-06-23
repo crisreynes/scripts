@@ -1,13 +1,13 @@
 #!/bin/bash
 # Requires sudo privileges
 # Go to home directory
-cd ~
+cd /home/"$SUDO_USER"
 # Ask for sudo credentials
 # sudo -v
 # Download & install JetBrainsMono Nerd Font
-sudo -u $SUDO_USER wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip -O ~/Downloads/jetbrainsmono.zip
-sudo -u $SUDO_USER mkdir -p ~/.local/share/fonts/jetbrainsmono-nerd-font
-sudo -u $SUDO_USER unzip ~/Downloads/jetbrainsmono.zip -d ~/.local/share/fonts/jetbrainsmono-nerd-font
+sudo -u $SUDO_USER wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.3.3/JetBrainsMono.zip -O /home/"$SUDO_USER"/Downloads/jetbrainsmono.zip
+sudo -u $SUDO_USER mkdir -p /home/"$SUDO_USER"/local/share/fonts/jetbrainsmono-nerd-font
+sudo -u $SUDO_USER unzip /home/"$SUDO_USER"/Downloads/jetbrainsmono.zip -d /home/"$SUDO_USER"/local/share/fonts/jetbrainsmono-nerd-font
 sudo -u $SUDO_USER fc-cache -fv
 
 # Add settings to /etc/dnf/dnf.conf
@@ -27,11 +27,11 @@ rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/mast
 sudo -u $SUDO_USER printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbaseurl=https://download.vscodium.com/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg\nmetadata_expire=1h" | sudo tee -a /etc/yum.repos.d/vscodium.repo
 
 # Install packages
-dnf -y install bat cmatrix cmus codium exa gcc-c++ git kitty mpv libreoffice neofetch neovim obs-studio python3-pip qbittorrent redshift rofi steam-devices stow syncthing tldr unrar vifm vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
+dnf -y install bat cmatrix cmus codium exa flatpak gcc-c++ git kitty mpv libreoffice neofetch neovim obs-studio python3-pip qbittorrent redshift rofi steam-devices stow syncthing tldr unrar vifm vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
 # Download mailspring rpm
-sudo -u $SUDO_USER wget https://updates.getmailspring.com/download?platform=linuxRpm -O ~/Downloads/mailspring.rpm
+sudo -u $SUDO_USER wget https://updates.getmailspring.com/download?platform=linuxRpm -O /home/"$SUDO_USER"/Downloads/mailspring.rpm
 # Install mailspring rpm
-dnf -y install ~/Downloads/mailspring.rpm
+dnf -y install /home/"$SUDO_USER"/Downloads/mailspring.rpm
 
 # Enable Flathub
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
