@@ -27,7 +27,7 @@ rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/mast
 sudo -u $SUDO_USER printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbaseurl=https://download.vscodium.com/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg\nmetadata_expire=1h" | sudo tee -a /etc/yum.repos.d/vscodium.repo
 
 # Install packages
-dnf -y install bat cmatrix cmus codium exa flatpak gcc-c++ git kitty mpv libreoffice neofetch neovim obs-studio python3-pip qbittorrent redshift rofi steam-devices stow syncthing tldr unrar vifm vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
+dnf -y install bat cmatrix codium exa flatpak gcc-c++ git kitty mpv libreoffice neofetch neovim obs-studio python3-pip qbittorrent redshift rofi steam-devices stow syncthing tldr unrar vifm vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
 # Download mailspring rpm
 sudo -u $SUDO_USER wget https://updates.getmailspring.com/download?platform=linuxRpm -O /home/"$SUDO_USER"/Downloads/mailspring.rpm
 # Install mailspring rpm
@@ -36,7 +36,7 @@ dnf -y install /home/"$SUDO_USER"/Downloads/mailspring.rpm
 # Enable Flathub
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # Install flatpak packages
-sudo -u $SUDO_USER flatpak install -y flathub com.discordapp.Discord com.github.tchx84.Flatseal com.heroicgameslauncher.hgl com.spotify.Client com.valvesoftware.Steam io.gitlab.librewolf-community md.obsidian.Obsidian net.ankiweb.Anki net.davidotek.pupgui2 org.libretro.RetroArch org.ppsspp.PPSSPP org.prismlauncher.PrismLauncher org.telegram.desktop us.zoom.Zoom
+sudo -u $SUDO_USER flatpak install -y flathub com.discordapp.Discord com.github.tchx84.Flatseal com.heroicgameslauncher.hgl com.spotify.Client com.valvesoftware.Steam io.github.hrkfdn.ncspot io.gitlab.librewolf-community md.obsidian.Obsidian net.ankiweb.Anki net.davidotek.pupgui2 org.libretro.RetroArch org.ppsspp.PPSSPP org.prismlauncher.PrismLauncher org.telegram.desktop us.zoom.Zoom
 
 # ~/.local/bin/
 sudo -u $SUDO_USER pip install --user bumblebee-status
