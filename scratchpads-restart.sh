@@ -11,9 +11,9 @@ then
   exit 0
 fi
 
-if ! pgrep -f "kitty --class cmus" >/dev/null
+if ! pgrep -f "kitty --class ncspot" >/dev/null
 then
-  kitty --class cmus cmus
+  kitty --class ncspot ncspot flatpak run io.github.hrkfdn.ncspot -b /home/$USER/.config/ncspot
   exit 0
 fi
 exit 0
