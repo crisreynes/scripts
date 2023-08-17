@@ -2,8 +2,7 @@
 # Requires sudo privileges
 # Go to home directory
 cd /home/"$SUDO_USER"
-# Ask for sudo credentials
-# sudo -v
+
 # Download & install JetBrainsMono Nerd Font
 sudo -u $SUDO_USER wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip -O /home/"$SUDO_USER"/Downloads/jetbrainsmono.zip
 sudo -u $SUDO_USER mkdir -p /home/"$SUDO_USER"/.local/share/fonts/jetbrainsmono-nerd-font
