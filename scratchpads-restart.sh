@@ -13,7 +13,7 @@ fi
 
 if ! pgrep -f "kitty --class ncspot" >/dev/null
 then
-  kitty --class ncspot flatpak run io.github.hrkfdn.ncspot -b /home/$USER/.config/ncspot
+  kitty --class ncspot ncspot
   exit 0
 fi
 exit 0
