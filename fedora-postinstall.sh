@@ -26,7 +26,7 @@ rpmkeys --import https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/mast
 sudo -u $SUDO_USER printf "[gitlab.com_paulcarroty_vscodium_repo]\nname=download.vscodium.com\nbaseurl=https://download.vscodium.com/rpms/\nenabled=1\ngpgcheck=1\nrepo_gpgcheck=1\ngpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/-/raw/master/pub.gpg\nmetadata_expire=1h" | sudo tee -a /etc/yum.repos.d/vscodium.repo
 
 # Install packages
-dnf -y install bat cmatrix codium exa flatpak gcc-c++ git kitty mpv libreoffice neofetch neovim obs-studio python3-pip qbittorrent redshift rofi steam-devices stow syncthing tldr unrar vifm vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
+dnf -y install bat cmatrix codium exa flatpak gcc-c++ git kitty mpv libreoffice neofetch neovim obs-studio picom python3-pip qbittorrent redshift rofi steam-devices stow syncthing tldr unrar vifm vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
 # Download mailspring rpm
 sudo -u $SUDO_USER wget https://updates.getmailspring.com/download?platform=linuxRpm -O /home/"$SUDO_USER"/Downloads/mailspring.rpm
 # Install mailspring rpm
