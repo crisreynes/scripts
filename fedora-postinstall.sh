@@ -45,5 +45,7 @@ sudo -u $SUDO_USER flatpak install -y flathub com.discordapp.Discord com.github.
 sudo -u $SUDO_USER pip install --user bumblebee-status
 sudo -u $SUDO_USER pip install --user pulsemixer
 
+# Install tmux plugin manager
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 # Clone .dotfiles
 sudo -u $SUDO_USER git clone https://github.com/crisreynes/.dotfiles
