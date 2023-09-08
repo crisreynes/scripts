@@ -41,6 +41,11 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # Install flatpak packages
 sudo -u $SUDO_USER flatpak install -y flathub com.discordapp.Discord com.github.tchx84.Flatseal com.heroicgameslauncher.hgl com.valvesoftware.Steam io.gitlab.librewolf-community md.obsidian.Obsidian net.ankiweb.Anki net.davidotek.pupgui2 org.libretro.RetroArch org.ppsspp.PPSSPP org.prismlauncher.PrismLauncher org.telegram.desktop us.zoom.Zoom
 
+# Install snapd
+dnf install snapd
+# Install snap packages
+snap install postman
+
 # ~/.local/bin/
 sudo -u $SUDO_USER pip install --user bumblebee-status
 sudo -u $SUDO_USER pip install --user pulsemixer
