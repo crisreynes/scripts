@@ -50,7 +50,13 @@ snap install postman
 sudo -u $SUDO_USER pip install --user bumblebee-status
 sudo -u $SUDO_USER pip install --user pulsemixer
 
+# Repos
+sudo -u $SUDO_USER mkdir ~/repos
+# ctpv
+sudo -u $SUDO_USER git clone https://github.com/NikitaIvanovV/ctpv ~/repos/ctpv
+# nsxiv
+sudo -u $SUDO_USER git clone https://github.com/nsxiv/nsxiv ~/repos/nsxiv
 # Install tmux plugin manager
 sudo -u $SUDO_USER git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-# Clone .dotfiles
+# .dotfiles
 sudo -u $SUDO_USER git clone https://github.com/crisreynes/.dotfiles
