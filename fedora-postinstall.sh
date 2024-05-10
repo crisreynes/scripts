@@ -16,12 +16,12 @@ bash -c "echo 'max_parallel_downloads=10' >> /etc/dnf/dnf.conf"
 bash -c "echo 'defaultyes=True' >> /etc/dnf/dnf.conf"
 bash -c "echo 'keepcache=True' >> /etc/dnf/dnf.conf"
 # Update system
-dnf -y update 
+dnf -y update
 # Enable RPM Fusion
 dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Install packages
-dnf -y install bat cmatrix eza ffmpegthumbnailer flameshot flatpak git go kitty mpv libreoffice neofetch neovim newsboat obs-studio picom qbittorrent redshift rofi steam-devices stow syncthing tldr unrar vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
+dnf -y install bat cmatrix eza fastfetch ffmpegthumbnailer flameshot flatpak git go kitty mpv libreoffice neovim newsboat obs-studio picom qbittorrent redshift rofi steam-devices stow syncthing tldr unrar vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
 dnf -y install cargo dbus-devel file-devel gcc-c++ giflib-devel imlib2-devel libexif-devel libwebp-devel libxcb-devel libXft-devel ncurses-devel openssl-devel pulseaudio-libs-devel python3-pip rust
 # Download mailspring rpm
 sudo -u $SUDO_USER wget https://updates.getmailspring.com/download?platform=linuxRpm -O /home/"$SUDO_USER"/Downloads/mailspring.rpm
