@@ -19,6 +19,12 @@ bash -c "echo 'keepcache=True' >> /etc/dnf/dnf.conf"
 dnf -y update
 # Enable RPM Fusion
 dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+dnf -y config-manager --enable fedora-cisco-openh264
+# Switch to full ffmpeg
+dnf -y swap ffmpeg-free ffmpeg --allowerasing
+# Install additional codec
+dnf -y groupupdate multimedia --setopt="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+dnf -y groupupdate sound-and-video
 
 # Install packages
 dnf -y install bat cmatrix eza fastfetch ffmpegthumbnailer flameshot flatpak git go kitty mpv libreoffice neovim newsboat obs-studio picom qbittorrent redshift rofi steam steam-devices stow syncthing tldr unrar vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
