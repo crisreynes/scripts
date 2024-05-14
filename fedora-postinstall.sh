@@ -21,7 +21,7 @@ dnf -y update
 dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # Install packages
-dnf -y install bat cmatrix eza fastfetch ffmpegthumbnailer flameshot flatpak git go kitty mpv libreoffice neovim newsboat obs-studio picom qbittorrent redshift rofi steam-devices stow syncthing tldr unrar vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
+dnf -y install bat cmatrix eza fastfetch ffmpegthumbnailer flameshot flatpak git go kitty mpv libreoffice neovim newsboat obs-studio picom qbittorrent redshift rofi steam steam-devices stow syncthing tldr unrar vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
 dnf -y install cargo dbus-devel file-devel gcc-c++ giflib-devel imlib2-devel libexif-devel libwebp-devel libxcb-devel libXft-devel ncurses-devel openssl-devel pulseaudio-libs-devel python3-pip rust
 # Download mailspring rpm
 sudo -u $SUDO_USER wget https://updates.getmailspring.com/download?platform=linuxRpm -O /home/"$SUDO_USER"/Downloads/mailspring.rpm
@@ -34,7 +34,7 @@ sudo -u $SUDO_USER cargo install ncspot
 # Enable Flathub
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # Install flatpak packages
-sudo -u $SUDO_USER flatpak install -y flathub com.discordapp.Discord com.github.tchx84.Flatseal com.heroicgameslauncher.hgl com.valvesoftware.Steam io.gitlab.librewolf-community md.obsidian.Obsidian net.ankiweb.Anki net.davidotek.pupgui2 org.libretro.RetroArch org.ppsspp.PPSSPP org.prismlauncher.PrismLauncher org.telegram.desktop us.zoom.Zoom
+sudo -u $SUDO_USER flatpak install -y flathub com.discordapp.Discord com.github.tchx84.Flatseal com.heroicgameslauncher.hgl io.gitlab.librewolf-community md.obsidian.Obsidian net.ankiweb.Anki net.davidotek.pupgui2 org.libretro.RetroArch org.ppsspp.PPSSPP org.prismlauncher.PrismLauncher org.telegram.desktop us.zoom.Zoom
 
 # Install snapd
 dnf -y install snapd
