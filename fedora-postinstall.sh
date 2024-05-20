@@ -27,7 +27,7 @@ dnf -y groupupdate multimedia --setopt="install_weak_deps=False" --exclude=Packa
 dnf -y groupupdate sound-and-video
 
 # Install packages
-dnf -y install bat cmatrix eza fastfetch ffmpegthumbnailer flameshot flatpak git go kitty mpv libreoffice neovim newsboat obs-studio picom qbittorrent redshift rofi steam steam-devices stow syncthing tldr unrar vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
+dnf -y install bat cmatrix emacs eza fastfetch ffmpegthumbnailer flameshot flatpak git go kitty mpv libreoffice neovim newsboat obs-studio picom qbittorrent redshift rofi steam steam-devices stow syncthing tldr unrar vlc VirtualBox WoeUSB xkill zathura zathura-pdf-poppler
 dnf -y install cargo dbus-devel file-devel gcc-c++ giflib-devel imlib2-devel libexif-devel libwebp-devel libxcb-devel libXft-devel ncurses-devel openssl-devel pulseaudio-libs-devel python3-pip rust
 # Download mailspring rpm
 sudo -u $SUDO_USER wget https://updates.getmailspring.com/download?platform=linuxRpm -O /home/"$SUDO_USER"/Downloads/mailspring.rpm
