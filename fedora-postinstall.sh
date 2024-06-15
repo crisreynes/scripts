@@ -52,12 +52,12 @@ sudo -u $SUDO_USER pip install --user bumblebee-status
 sudo -u $SUDO_USER pip install --user pulsemixer
 
 # Repos
-sudo -u $SUDO_USER mkdir ~/repos
+sudo -u $SUDO_USER mkdir /home/"$SUDO_USER"/repos
 # ctpv
-sudo -u $SUDO_USER git clone https://github.com/NikitaIvanovV/ctpv ~/repos/ctpv
+sudo -u $SUDO_USER git clone https://github.com/NikitaIvanovV/ctpv /home/"$SUDO_USER"/repos/ctpv
 # nsxiv
-sudo -u $SUDO_USER git clone https://github.com/nsxiv/nsxiv ~/repos/nsxiv
+sudo -u $SUDO_USER git clone https://github.com/nsxiv/nsxiv /home/"$SUDO_USER"/repos/nsxiv
 # Install tmux plugin manager
-sudo -u $SUDO_USER git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+sudo -u $SUDO_USER git clone https://github.com/tmux-plugins/tpm /home/"$SUDO_USER"/.tmux/plugins/tpm
 # .dotfiles
-sudo -u $SUDO_USER git clone https://github.com/crisreynes/.dotfiles
+sudo -u $SUDO_USER git clone https://github.com/crisreynes/.dotfiles /home/"$SUDO_USER"/.dotfiles
