@@ -1,5 +1,9 @@
 #!/bin/bash
 # Requires sudo privileges
+if [ $(id -u) -ne 0 ]; then
+	echo Run this script using sudo!
+	exit
+fi
 # Go to home directory
 cd /home/"$SUDO_USER"
 
