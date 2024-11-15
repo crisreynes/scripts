@@ -36,9 +36,6 @@ dnf -y install cargo cmake dbus-devel file-devel gcc-c++ giflib-devel imlib2-dev
 ## RPM Fusion
 dnf -y install cmus steam steam-devices VirtualBox
 
-# Install cargo packages
-sudo -u $SUDO_USER cargo install ncspot
-
 # Enable Flathub
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # Install flatpak packages
@@ -46,9 +43,6 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 sudo -u $SUDO_USER flatpak install -y flathub com.discordapp.Discord com.heroicgameslauncher.hgl net.davidotek.pupgui2 org.libretro.RetroArch org.prismlauncher.PrismLauncher
 ## General
 sudo -u $SUDO_USER flatpak install -y flathub com.github.tchx84.Flatseal com.obsproject.Studio io.gitlab.librewolf-community net.ankiweb.Anki org.telegram.desktop us.zoom.Zoom
-
-# Install snap packages
-snap install postman
 
 # ~/.local/bin/
 sudo -u $SUDO_USER pip install --user bumblebee-status
