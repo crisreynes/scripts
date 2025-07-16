@@ -42,6 +42,7 @@ sudo -u $SUDO_USER flatpak install -y flathub com.github.tchx84.Flatseal com.obs
 # ~/.local/bin/
 sudo -u $SUDO_USER pip install --user bumblebee-status
 sudo -u $SUDO_USER pip install --user pulsemixer
+sudo -u $SUDO_USER pip install --user termdown
 
 # Repos
 sudo -u $SUDO_USER mkdir /home/"$SUDO_USER"/repos
