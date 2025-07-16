@@ -26,7 +26,7 @@ dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-
 dnf -y config-manager setopt fedora-cisco-openh264.enabled=1
 
 # Install packages
-dnf -y install bat cmatrix emacs eza fastfetch ffmpegthumbnailer flameshot flatpak git go kitty mpv libreoffice neovim newsboat picom qbittorrent qtile redshift rofi sddm snapd stow syncthing tealdeer unrar vlc WoeUSB xkill zathura zathura-pdf-poppler
+dnf -y install bat cmatrix emacs eza fastfetch ffmpegthumbnailer flameshot flatpak git go imv kitty mpv libreoffice neovim newsboat picom qbittorrent qtile redshift rofi sddm snapd stow syncthing tealdeer unrar vlc WoeUSB xkill zathura zathura-pdf-poppler
 dnf -y install cargo cmake dbus-devel file-devel gcc-c++ giflib-devel imlib2-devel libexif-devel libwebp-devel libxcb-devel libXft-devel ncurses-devel openssl-devel pulseaudio-libs-devel python3-pip rust
 ## RPM Fusion
 dnf -y install cmus steam steam-devices VirtualBox
