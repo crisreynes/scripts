@@ -51,5 +51,11 @@ sudo -u $SUDO_USER git clone https://github.com/NikitaIvanovV/ctpv /home/"$SUDO_
 sudo -u $SUDO_USER git clone https://github.com/nsxiv/nsxiv /home/"$SUDO_USER"/repos/nsxiv
 # Install tmux plugin manager
 sudo -u $SUDO_USER git clone https://github.com/tmux-plugins/tpm /home/"$SUDO_USER"/.tmux/plugins/tpm
+# keyd
+sudo -u $SUDO_USER git clone https://github.com/rvaiya/keyd /home/"$SUDO_USER"/repos/keyd
+# warpd
+sudo -u $SUDO_USER git clone https://github.com/crisreynes/warpd /home/"$SUDO_USER"/repos/warpd
+# Bibata Cursor
+sudo -u $SUDO_USER git clone https://github.com/ful1e5/Bibata_Cursor /home/"$SUDO_USER"/repos/bibata-cursor
 # .dotfiles
 sudo -u $SUDO_USER git clone https://github.com/crisreynes/.dotfiles /home/"$SUDO_USER"/.dotfiles
